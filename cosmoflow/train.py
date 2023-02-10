@@ -40,7 +40,10 @@ from types import SimpleNamespace
 import yaml
 import pandas as pd
 import tensorflow as tf
+from cloudmesh.common.util import banner
 # Suppress TF warnings
+banner("Tensorflow version")
+print(tf.__version__)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 tf.compat.v1.logging.set_verbosity(logging.ERROR)
 import horovod.tensorflow.keras as hvd
